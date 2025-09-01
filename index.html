@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name: projects, skills, contact." />
+  <style>
+    :root { --max: 920px; }
+    body { font-family: system-ui, Arial, sans-serif; margin: 0; line-height: 1.6; }
+    header { padding: 56px 20px; text-align: center; }
+    header h1 { margin: 0 0 8px; font-size: 2.2rem; }
+    header p { margin: 0; opacity: .8; }
+    nav { position: sticky; top: 0; background: #fff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+    nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 12px 20px; justify-content: center; }
+    main { max-width: var(--max); margin: 24px auto; padding: 0 20px; }
+    section { padding: 24px 0; border-bottom: 1px solid #f0f0f0; }
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
+    .card { padding: 16px; border: 1px solid #eee; border-radius: 12px; }
+    footer { text-align: center; padding: 32px 20px; color: #666; }
+    a { text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/avatar.jpg" alt="Your photo" width="96" height="96" style="border-radius:50%; object-fit:cover;" />
+    <h1>Your Name</h1>
+    <p>Role • Tech/Interests • City</p>
+  </header>
+  <nav><ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul></nav>
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>Short bio—what you do, what you enjoy, and what you’re looking for.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Project Name</h3>
+          <p>One-line value: what it does, why it’s cool.</p>
+          <p><a href="https://github.com/yourusername/project">Code</a> · <a href="https://live-demo.example">Live</a></p>
+        </article>
+        <!-- Duplicate .card blocks for more projects -->
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:you@example.com">you@example.com</a> · <a href="https://www.linkedin.com/in/yourhandle/">LinkedIn</a> · <a href="https://github.com/yourusername">GitHub</a></p>
+    </section>
+  </main>
+  <footer>© <span id="y"></span> Your Name</footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear()</script>
+</body>
+</html>
