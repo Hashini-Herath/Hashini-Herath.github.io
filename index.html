@@ -8,39 +8,42 @@
   <style>
     :root {
       --max: 920px;
-      --primary: #6a11cb;   /* purple */
-      --secondary: #2575fc; /* blue */
-      --bg-light: #f9f9ff;
-      --text-dark: #333;
+      --primary-dark: #2C3E50;  /* deep navy-gray */
+      --secondary-dark: #34495E; /* slate */
+      --accent: #7F8C8D;        /* soft gray */
+      --light: #BDC3C7;         /* light gray */
+      --bg: #ECF0F1;            /* off-white background */
+      --text-dark: #2C3E50;
     }
 
     body {
       font-family: 'Segoe UI', system-ui, sans-serif;
       margin: 0;
-      line-height: 1.6;
+      line-height: 1.7;
       color: var(--text-dark);
-      background: var(--bg-light);
+      background: var(--bg);
     }
 
     /* Header */
     header {
       padding: 56px 20px;
       text-align: center;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background: linear-gradient(135deg, var(--primary-dark), var(--secondary-dark));
       color: white;
     }
     header h1 {
       margin: 16px 0 8px;
-      font-size: 2.5rem;
+      font-size: 2.7rem;
+      font-weight: 600;
     }
     header p {
       margin: 0;
-      opacity: 0.9;
+      opacity: 0.85;
       font-size: 1.1rem;
     }
     header img {
-      border: 5px solid white;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border: 5px solid var(--bg);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
     }
 
     /* Navbar */
@@ -48,81 +51,87 @@
       position: sticky;
       top: 0;
       background: white;
-      border-bottom: 2px solid #eee;
+      border-bottom: 1px solid var(--light);
       z-index: 100;
     }
     nav ul {
       display: flex;
-      gap: 24px;
+      gap: 28px;
       list-style: none;
       margin: 0;
       padding: 14px 20px;
       justify-content: center;
     }
     nav a {
-      color: var(--text-dark);
+      color: var(--secondary-dark);
       font-weight: 500;
       transition: color 0.3s;
     }
     nav a:hover {
-      color: var(--primary);
+      color: var(--primary-dark);
     }
 
     /* Main Content */
     main {
       max-width: var(--max);
-      margin: 24px auto;
+      margin: 32px auto;
       padding: 0 20px;
     }
     section {
-      padding: 40px 0;
+      padding: 50px 0;
     }
     section h2 {
       text-align: center;
-      color: var(--primary);
-      margin-bottom: 24px;
+      color: var(--secondary-dark);
+      margin-bottom: 28px;
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--light);
+      display: inline-block;
+      padding-bottom: 6px;
     }
 
     /* Projects */
     .grid {
       display: grid;
-      gap: 20px;
+      gap: 24px;
       grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
     }
     .card {
-      padding: 20px;
+      padding: 24px;
       border-radius: 16px;
       background: white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      border: 1px solid var(--light);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
       transition: transform 0.3s, box-shadow 0.3s;
     }
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
     .card h3 {
       margin-top: 0;
-      color: var(--secondary);
+      color: var(--primary-dark);
     }
 
     /* Resume link */
     #resume a {
       display: inline-block;
-      padding: 12px 24px;
-      background: var(--primary);
+      padding: 14px 28px;
+      background: var(--primary-dark);
       color: white;
       border-radius: 8px;
       text-decoration: none;
+      font-weight: 500;
       transition: background 0.3s;
     }
     #resume a:hover {
-      background: var(--secondary);
+      background: var(--secondary-dark);
     }
 
     /* Contact */
     #contact p a {
-      margin: 0 10px;
-      color: var(--primary);
+      margin: 0 12px;
+      color: var(--secondary-dark);
       font-weight: 500;
     }
     #contact p a:hover {
@@ -132,9 +141,10 @@
     /* Footer */
     footer {
       text-align: center;
-      padding: 32px 20px;
-      background: #222;
-      color: #ccc;
+      padding: 36px 20px;
+      background: var(--secondary-dark);
+      color: var(--light);
+      font-size: 0.9rem;
     }
   </style>
 </head>
