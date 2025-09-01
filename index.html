@@ -4,58 +4,182 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Hashini Herath — Portfolio</title>
-  <meta name="description" content="Portfolio of Your Name: projects, skills, contact." />
+  <meta name="description" content="Portfolio of Hashini Herath: projects, skills, resume, and contact." />
   <style>
-    :root { --max: 920px; }
-    body { font-family: system-ui, Arial, sans-serif; margin: 0; line-height: 1.6; }
-    header { padding: 56px 20px; text-align: center; }
-    header h1 { margin: 0 0 8px; font-size: 2.2rem; }
-    header p { margin: 0; opacity: .8; }
-    nav { position: sticky; top: 0; background: #fff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
-    nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 12px 20px; justify-content: center; }
-    main { max-width: var(--max); margin: 24px auto; padding: 0 20px; }
-    section { padding: 24px 0; border-bottom: 1px solid #f0f0f0; }
-    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
-    .card { padding: 16px; border: 1px solid #eee; border-radius: 12px; }
-    footer { text-align: center; padding: 32px 20px; color: #666; }
-    a { text-decoration: none; }
+    :root {
+      --max: 920px;
+      --primary: #6a11cb;   /* purple */
+      --secondary: #2575fc; /* blue */
+      --bg-light: #f9f9ff;
+      --text-dark: #333;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background: var(--bg-light);
+    }
+
+    /* Header */
+    header {
+      padding: 56px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+    }
+    header h1 {
+      margin: 16px 0 8px;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 1.1rem;
+    }
+    header img {
+      border: 5px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 2px solid #eee;
+      z-index: 100;
+    }
+    nav ul {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 14px 20px;
+      justify-content: center;
+    }
+    nav a {
+      color: var(--text-dark);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    /* Main Content */
+    main {
+      max-width: var(--max);
+      margin: 24px auto;
+      padding: 0 20px;
+    }
+    section {
+      padding: 40px 0;
+    }
+    section h2 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 24px;
+    }
+
+    /* Projects */
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    }
+    .card {
+      padding: 20px;
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: var(--secondary);
+    }
+
+    /* Resume link */
+    #resume a {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--primary);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    #resume a:hover {
+      background: var(--secondary);
+    }
+
+    /* Contact */
+    #contact p a {
+      margin: 0 10px;
+      color: var(--primary);
+      font-weight: 500;
+    }
+    #contact p a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      background: #222;
+      color: #ccc;
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="My Photo.jpg" alt="Your photo" width="200" height="200" style="border-radius:50%; object-fit:cover;" />
     <h1>Hashini Herath</h1>
-    <p>Undergraduate • Tech/Interests • Kandy</p>
+    <p>Undergraduate • Tech Enthusiast • Kandy</p>
   </header>
-  <nav><ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#resume">Resume</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul></nav>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <main>
     <section id="about">
       <h2>About</h2>
-      <p>Hi, I'm Hashini Herath, a dynamic undergraduate with a passion for technology, innovation, and leadership. Currently pursuing a BSc. Honours Degree in Information Systems at the Sabaragamuwa University of Sri Lanka and a Bachelor of Information Technology (External) at the University of Moratuwa, I thrive at the intersection of learning and application.
+      <p>Hi, I'm Hashini Herath, a dynamic undergraduate with a passion for technology, innovation, and leadership. Currently pursuing a BSc. Honours Degree in Information Systems at the Sabaragamuwa University of Sri Lanka and a Bachelor of Information Technology (External) at the University of Moratuwa, I thrive at the intersection of learning and application.</p>
 
-With hands-on experience in the financial sector during my internship at Sampath Bank PLC, I honed my skills in client onboarding, compliance, and data-driven processes. I'm proficient in technologies such as C, C#, Java, DBMS and Office 365, and enjoy web designing and exploring data science.
+      <p>With hands-on experience in the financial sector during my internship at Sampath Bank PLC, I honed my skills in client onboarding, compliance, and data-driven processes. I'm proficient in technologies such as C, C#, Java, DBMS and Office 365, and enjoy web designing and exploring data science.</p>
 
-Beyond academics and technical expertise, I’m an enthusiastic learner, a strategic thinker, and a proven leader with a history of excellence in debate, chess, table tennis and event management. Serving as the Secretary of the Rotaract Club of Kandy Metropolitan for RI Year 2025-26, I collaborate with diverse teams to drive impactful initiatives.
+      <p>Beyond academics and technical expertise, I’m an enthusiastic learner, a strategic thinker, and a proven leader with a history of excellence in debate, chess, table tennis and event management. Serving as the Secretary of the Rotaract Club of Kandy Metropolitan for RI Year 2025-26, I collaborate with diverse teams to drive impactful initiatives.</p>
 
-I see every opportunity as a chance to grow, innovate, and make meaningful contributions. Whether it’s leading a team, solving complex problems, or learning a new skill, I’m always up for a challenge.
-
-Let’s connect and explore how we can collaborate to create something impactful.</p>
+      <p>I see every opportunity as a chance to grow, innovate, and make meaningful contributions. Whether it’s leading a team, solving complex problems, or learning a new skill, I’m always up for a challenge.</p>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
       <div class="grid">
         <article class="card">
+          <h3>Portfolio Website</h3>
+          <p>A responsive personal portfolio built with HTML, CSS, and hosted on GitHub Pages.</p>
+          <p><a href="https://github.com/Hashini-Herath">Code</a></p>
+        </article>
+
+        <article class="card">
           <h3>Project Name</h3>
           <p>One-line value: what it does, why it’s cool.</p>
           <p><a href="https://github.com/Hashini-Herath?tab=projects">Code</a> · <a href="https://live-demo.example">Live</a></p>
         </article>
-        <!-- Duplicate .card blocks for more projects -->
       </div>
     </section>
 
@@ -63,13 +187,21 @@ Let’s connect and explore how we can collaborate to create something impactful
       <h2>Resume</h2>
       <p><a href="resume.pdf" target="_blank">Download My Resume (PDF)</a></p>
     </section>
-    
+
     <section id="contact">
       <h2>Contact</h2>
-      <p><a href="mailto:hashiniherath319@gmail.com">hashiniherath319@gmail.com</a> · <a href="https://www.linkedin.com/in/hashini-herath-hh/">LinkedIn</a> · <a href="https://github.com/Hashini-Herath">GitHub</a></p>
+      <p>
+        <a href="mailto:hashiniherath319@gmail.com">hashiniherath319@gmail.com</a> · 
+        <a href="https://www.linkedin.com/in/hashini-herath-hh/">LinkedIn</a> · 
+        <a href="https://github.com/Hashini-Herath">GitHub</a>
+      </p>
     </section>
   </main>
-  <footer>© <span id="y"></span> Hashini Herath</footer>
+
+  <footer>
+    © <span id="y"></span> Hashini Herath
+  </footer>
+
   <script>document.getElementById("y").textContent = new Date().getFullYear()</script>
 </body>
 </html>
